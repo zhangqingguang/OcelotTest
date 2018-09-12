@@ -1,0 +1,32 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "53437"
+        }
+      ],
+      "UpstreamPathTemplate": "/ClientService/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    },
+    // API:CAS.ProductService
+    {
+      "DownstreamPathTemplate": "/api/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "54984"
+        }
+      ],
+      "UpstreamPathTemplate": "/ProductService/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:55971"
+  }
+}
